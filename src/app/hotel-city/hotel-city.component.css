@@ -1,0 +1,17 @@
+.card-title{
+    font-family: 'Phudu', cursive;
+font-family: 'Playfair Display', serif, ;
+}
+.card-text{
+    font-family: 'Phudu', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Source Sans Pro', sans-serif;
+}
+.back-color{
+    background-color: #fafaf9;
+}
+
+a{
+    text-decoration: none;
+}
+

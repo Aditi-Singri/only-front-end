@@ -1,0 +1,88 @@
+<app-header></app-header>
+    
+    <div class="container">
+        
+    <div class="row">
+        <div class="col-md-2" style="margin-left: -190px;">
+        <form class="box" action="" method="POST" target="_self">
+            <select id="text" name="text" [(ngModel)]="selectedValue" required>
+                <option value="" selected hidden>Location</option>
+                <option value="banglore">Bengaluru</option>
+                <option  value="goa">Goa</option>
+                </select> 
+            <!-- <input placeholder="Location" type="text" onfocus="(this.type = 'text')"  id="text"> -->
+        </form>
+    
+        </div>
+    
+    <div class="col-md-2">
+        <form class="box" action="" method="POST" target="_self" >
+            <input  placeholder="From Date" type="text" onfocus="(this.type = 'date')"  id="date" name="startdate" [(ngModel)]="startdate" required>
+            <!-- <input type="submit" id="submit" value="Submit"> -->
+          </form>
+    </div>
+    <div class="col-md-2">
+        <form class="box" action="" method="POST" target="_self"> 
+            <input placeholder="To-Date" type="text" onfocus="(this.type = 'date')"  id="date" name="enddate" [(ngModel)]="enddate" required>
+            <!-- <input type="submit" id="submit" value="Submit"> -->
+          </form>
+    </div>
+    <div class="col-md-2">
+            <form class="box" action="" method="POST" target="_self">
+                <select  id="text" name="text" name="noofrooms" [(ngModel)]="noofrooms" required>
+                    <option value="" selected hidden>Number of Rooms</option>
+                    <option *ngFor="let num of roomOptions" [value]="num">{{num}}</option>
+
+                </select>
+            </form> 
+            
+
+        </div>
+        <div class="col-md-2">
+            <form class="box" action="" method="POST" target="_self">
+                <select id="text" name="text" name="noofmem"  onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1;' [(ngModel)]="noofmem" required>
+                    <option value="" selected hidden>Number of Guests</option>
+                    <option *ngFor="let num of memberOptions" [value]="num">{{num}}</option>
+                </select>
+            </form> 
+        </div>
+    <div class="col-md"  style="margin-right:-1100px;margin-left: -30px;">
+        <form class="submitbox" action="" method="POST" target="_self">
+        <input  type="submit" (click)="getLocation()" id="submit" value="Search">
+    </form>   
+    
+    </div>
+      </div>
+     </div>  
+    
+    <app-card></app-card>
+    <div class="container">
+        
+    <div class="row">
+        <div class="col-md-5">
+            <h5>Q.How do I search for hotels on your website?</h5>
+            <p>To search for hotels on our website, simply enter your destination, check-in and check-out dates, and the number of guests. You can also refine your search results by adding filters such as hotel star ratings, amenities, and price range.</p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <h5>Q.How do I make a booking on your website?</h5>
+            <p>Once you have found a hotel that you like, select your desired room type and click on the "Book Now" button. Follow the on-screen prompts to complete your booking, including entering your personal and payment information. Once your payment is confirmed, you will receive a booking confirmation email.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <h5>Q.Can I cancel my booking?</h5>
+            <p>Yes, you can cancel your booking, but it will depend on the hotel's cancellation policy. You can find the hotel's cancellation policy on the booking confirmation page and in your confirmation email. If you need to cancel your booking, you can do so through your account on our website or by contacting our customer service team.</p>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <h5>Q.What if I have a problem with my booking or stay?</h5>
+            <p>If you encounter any problems with your booking or stay, please contact our customer service team. We are available 24/7 to assist you with any issues or concerns.</p> 
+        </div> 
+    </div>
+    </div>
+  
+    <app-footer></app-footer>
+    
+  
+    

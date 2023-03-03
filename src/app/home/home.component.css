@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field {margin-right: 12px; }
+
+.input-group{align-items:center;}
+
+.select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+   font-size: 16px;
+   color: #333;
+  }
+  
+  .text{
+     font-size: 16px;
+     color: aliceblue;
+    }
+    
+    .box{
+      width: 50px;
+      height: 40px;
+       padding: 10px;
+        position: absolute;
+        border-radius: 2px;
+        text-align: center;
+      }
+      .submitbox{
+        width:220px;
+        padding: 10px;
+        position: absolute;
+         border-radius: 2px;
+          text-align: center;
+        }
+        #date,#text{
+          border-color: rgb(169, 165, 165);
+          width:190px;
+          height: 45px;}
+          
+          #dropdown{width:190px;height: 45px;}
+          
+          #submit{border-color: rgb(169, 165, 165);width:140px;height:45px;}
+          
+          #submit:hover{background: #2ecc71; }
+          .row{display: flex;align-items: center;justify-content: center; }
+          .container{ margin-top: 30px;}
+
+          .dropdown-menu {
+            overflow:scroll; 
+         }

@@ -1,0 +1,26 @@
+.user{
+    border:solid 2px #ffff;
+    height:auto;
+    width:1100px; 
+    margin-left: 90px; 
+}
+.user h6{
+    color: #4a4a4a;
+}
+
+.review{
+    /* border:solid 2px #f4f9fc; */
+    height:auto;
+    /* width:1100px;  */
+    /* padding-left: 20px;
+    padding-bottom: 20px; */
+    /* padding: 20px 20px 20px 20px; */
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+.bold{
+    padding-top: 20px;
+    font-size: larger;
+    font-weight: bold;    
+}

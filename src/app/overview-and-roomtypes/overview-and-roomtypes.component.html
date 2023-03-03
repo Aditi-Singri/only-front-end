@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Google Icons</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+        
+    </head>
+    <body style="margin-left: 50px;margin-top: 50px;">
+        <div class="Overview" style="margin-bottom: 50px;">
+            <div class="hotelname">
+                
+                <h4>
+                    About {{allHotelOverviews[0].hotelName}}
+                </h4>
+                <p style="font-weight: 600; font-size: 16px;">
+                    {{allHotelOverviews[0].description}}
+                <p>
+            </div>
+            <div class="description">
+                <ul style="margin-left: -12px; line-height: 8px" *ngFor="let ho of allHotelOverviews.slice(1)">
+                    <li>{{ho.description}}</li>
+            
+                </ul>
+                
+            </div>
+            <div class="icons" style="display: flex;margin-top: 20px;">
+                <div class="icon-box">
+                    <div class = "icon-box-items">
+                        <div>
+                            <i class="material-icons" >local_dining</i>
+                        </div>
+                        <div style="margin-top: 7px;">
+                            <span style="font-size: 12px;font-weight: bold;">Food & Dining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-box">
+                    <div class = "icon-box-items">
+                        <div>
+                            <i class="material-icons">location_on</i>
+                        </div>
+                        <div style="margin-top: 2px;">
+                            <p style="font-size: 12px; font-weight: bold;">Location & Surroundings</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-box">
+                    <div class = "icon-box-items">
+                        <div>
+                            <i class="material-icons" >apartment</i>
+                        </div>
+                        <div style="margin-top: 7px;">
+                            <span style="font-size: 12px;font-weight: bold;">Property Highlights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-box">
+                    <div class = "icon-box-items-bed">
+                        <div class="bed-icon">
+                            <i class="fa fa-bed" ></i>
+                        </div>
+                        <div style="margin-top: 4px;">
+                            <p style="font-size: 12px;font-weight: bold;">Room Details & Amenities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-box">
+                    <div class = "icon-box-items">
+                        <div>
+                            <i class="material-icons" >directions_run</i>
+                        </div>
+                        <div style="margin-top: 2px;">
+                            <p style="font-size: 12px;font-weight: bold;">Activities & Nearby Attractions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-box">
+                    <div class = "icon-box-items">
+                        <div>
+                            <i class="material-icons">near_me</i>
+                        </div>
+                        <div style="margin-top: 2px;">
+                            <p style="font-size: 12px;font-weight: bold;">How to Reach the Property</p>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <div class="rooms">
+            <div>
+                <h3>
+                    Choose Your Room
+                </h3>
+            </div>
+            <div class="roomtypes" style="width: 70%; display: grid;grid-template-columns: auto auto auto; row-gap: 20px;column-gap: 10px;">
+                <div class="card" style="width: 22rem;height: 492px;" *ngFor="let image of images; let i = index">
+                    <img [src]="'data:' + image.contentType + ';base64,' + image.data"  class="card-img-top" height="220rem" alt="...">
+                    <div class="card-body" style="display: flex;flex-direction: column;justify-content: space-between;">
+                        <div>
+                            <h5 class="card-title">{{roomTypes[i].roomTypeName}}</h5>
+                            <div class="facilities">
+                                <ul style="list-style-type: square;margin-left: -12px;line-height: 8px;" *ngFor="let facilities of RoomFacilities[i];">
+                                    <li>{{facilities}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="roomprice" style="display: flex; justify-content: space-between;">
+                            <div class="amount" >
+                                <span>Rs.</span>
+                                <span>{{roomTypes[i].roomPrice}}</span><br>
+                                <span>per night</span>
+
+                            </div>
+                            <div class="selectroom" style="margin-top: 10px;">
+                                <p *ngIf="roomsAvailaible[i]==0" style="font-weight: 700;">Room Not Available</p>
+
+                                <button *ngIf="roomsAvailaible[i]==1" type="button" class="btn btn-primary" (click)="proceedToConfirm(image.roomTypeId)">Select Room</button>     
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>

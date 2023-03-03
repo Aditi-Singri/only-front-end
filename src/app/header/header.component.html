@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <img src="../assets/images/logo1.webp" alt="logo">
+        
+        <ul>
+            
+            <button *ngIf="!isLoggedIn" class="btn-1" routerLink="login" (click)="onLogout()">Login</button>
+            <button *ngIf="isLoggedIn" class="btn-1" (click)="onLogout()" routerLink="Home">Logout</button>
+            <button class="btn-2" (click)="signin()" [disabled]="isLoggedIn" routerLink="signup">Sign Up</button>
+                 
+        </ul>
+        <p  class="name">Hotels.com</p>  
+        <h3>Find Your Next Stay</h3>
+    
+    </nav>
+    </header>

@@ -1,0 +1,50 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Hotel Booking SignUp</h1>
+            <h4>Get Free Membership</h4>
+            <hr>
+          </div>
+          
+          <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+            <div class="row">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+               <input name="Name" type="name" class="form-control" id="name" formControlName="name">
+               <div class="form-text text-danger" *ngIf="(Name.touched && Name.invalid)">name is invalid</div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="mb-3">
+                <label class="form-label">MobileNumber</label>
+                <input name="MobileNumber"  type="text" class="form-control" id="number" formControlName="mobile">
+             
+                <div class="form-text text-danger" *ngIf="(Mobile.touched && Mobile.invalid)">number is invalid</div>
+                <!-- <div class="form-text textdanger" *ngIf="Mobile.errors?.['maxLength'] && (Mobile.dirty || Mobile.touched)">Please enter 10 digit mobile number</div>
+                <div class="form-text textdanger" *ngIf="Mobile.errors?.['minLength'] && (Mobile.dirty || Mobile.touched)"> Please enter 10 digit mobile number</div> -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-3">
+                <label  class="form-label">Email address</label>
+                <input name="EmailId" type="email" class="form-control" id="Email" formControlName="email">
+                <div class="form-text text-danger" *ngIf="(Email.touched && Email.invalid)">Email Address is invalid</div>
+            </div>
+            </div>
+            <div class="row">
+             <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input name="Password"  type="password" class="form-control" id="InputPassword" formControlName="password">
+              <div class="form-text text-danger" *ngIf="(Password.touched && Password.invalid)">Password is invalid</div>
+             </div> 
+            </div>   
+            <button  type="submit" [disabled]="signupform.invalid"  class="btn btn-primary">SignUp</button>
+          </form>
+          <a routerLink="/login"> Already Member ? Click to Login</a>
+        </div>
+      </div>
+    </div>
+ 

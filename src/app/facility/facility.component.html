@@ -1,0 +1,77 @@
+<div class="container">
+    <h3>Signature Amenities and Experiences</h3>
+    <div class="amenities">
+    
+    <div class="ame1" *ngFor="let hotelimage of hotelimage" >
+        <div>
+            <img [src]="'data:'+ hotelimage.contentType + ';base64,'+ hotelimage.data" alt="" class="img">
+        </div>
+            <!-- <div><img src="assets/images/img2.webp" alt="" class="img"><p>For the love of Delicious Food</p>
+            </div> -->
+            
+    </div>
+</div>
+
+<div class="amenities1">
+<p>Amenities at Our Residence</p>
+<div class="list">
+<ul>
+    <li>
+        <span><img src="assets/images/lounge.png" alt="">
+        <p>Lounge</p></span>
+    </li>
+    <li>
+        <span><img src="assets/images/free_parking.png" alt="">
+        <p>Free Parking</p></span>
+    </li>
+    <li>
+       <span> <img src="assets/images/businesspark.png" alt="" style="height: 50px; width: 50px;">
+       <p>Business Centre</p></span>
+    </li>
+    <li>
+        <span> <img src="assets/images/conference_room.png" alt="">
+        <p>Conference Room</p></span>
+    </li>
+    <li>
+        <span><img src="assets/images/bar.png" alt="">
+        <p>Bar</p>
+    </span>
+    </li>
+</ul>
+<hr>
+</div>
+
+<div class="list2">
+<ul>
+    <li class="basic">Basic Facilities</li>
+    <li class="tranfer">Transfers</li>
+    <li class="food">Food/Drinks</li>
+    <li class="family">Family/Kids</li>
+    <li class="safety">Safety/Security</li>
+</ul>
+</div>
+  <div class="list3">
+    
+    
+        <ul>
+        <li *ngFor="let hotelfacility of hotelbasicfacility" >{{hotelfacility.basicFacilities}}</li>
+        <!-- <li>Free Parking</li>
+        <li> Elevator/Lift</li>
+        <li>24-hour Room Service</li>
+        <li>Power Backup</li> -->
+    </ul>
+    <ul>
+        <li *ngFor="let transfer of hoteltransfers" >{{transfer.transfers}}</li>
+    </ul>
+    <ul>
+        <li *ngFor="let fooddrink of hotelfooddrinks" >{{fooddrink.foodandDrinks}}</li>
+    </ul>
+    <ul>
+        <li *ngFor="let familykid of hotelfamilykid" >{{familykid.familyandkids}}</li>
+    </ul>
+    <ul>
+        <li *ngFor="let safety of hotelsafety" >{{safety.safetyandSecuritys}}</li> 
+    </ul>
+  </div>
+</div>
+</div>

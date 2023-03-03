@@ -1,0 +1,29 @@
+html{
+    border:solid 2px #ffff;
+    height:auto;
+    width:1100px; 
+    margin-left: 55px; 
+    margin-bottom: 50px;
+}
+
+.icon-box{
+    border: 0.5px solid #C8ECFE; height: 80px;width: 130px;background-color: #edfcff;margin-right: 8px;
+}
+
+.icon-box-items{
+    margin: 5px;text-align: center;
+}
+.icon-box-items-bed{
+    text-align: center;
+}
+.material-icons{
+    font-size:28px; color: rgb(118, 158, 219);
+}
+.bed-icon{
+    font-size:23px; color: rgb(118, 158, 219);
+}
+.btn-primary{
+    
+    --bs-btn-border-radius: 1.5rem;
+    
+  } 

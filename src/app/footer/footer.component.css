@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+nav{
+    background-color: rgb(5, 5, 144);
+    padding-bottom: 50px;
+    margin-top: 30px;
+
+
+}
+
+.text{
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+    
+
+}
+.list-inline{
+    margin-top: 30px;
+    
+
+}
+

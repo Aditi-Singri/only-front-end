@@ -1,0 +1,102 @@
+.container{
+    margin-left: 80px;
+    width:1200px;
+}
+
+.amenities{
+    border:solid 2px #ffff;
+    height:320px;
+    display:flex;
+    /* width:1500px;  */
+}
+/* .amenities h2{
+    margin-left: 150px;
+} */
+.ame1 img{
+    height: 300px;
+    width:500px;
+    border-radius: 10px;
+    margin-right: 40px;
+    
+}
+.ame1 p{
+    color: white;
+    margin-top:-50px;
+    font-size: 25px;
+    margin-left: 20px;
+    font-weight: bolder;
+    
+}
+/* .ame1{
+    margin-left: 200px;
+    display:flex;
+} */
+
+.amenities1{
+    border:solid 2px #ffff;
+    height:350px;
+    margin-top: 10px;
+    /* width:1500px;  */
+}
+.amenities1 p{
+    /* margin-left: 150px; */
+    font-size: 25px;
+    
+    font-weight: bolder;
+}
+.list p{
+    font-size: medium;
+    margin-left:50px;
+    margin-top: -30px;
+}
+.list ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    /* margin-left: 150px; */
+    width: 1050px;
+}
+.list hr{
+    margin-right: 10px;
+}
+/* hr{
+    width: 1300px;
+    justify-content: left;
+    
+} */
+.list2 ul{
+    display: flex;
+    list-style-type: none;
+    /* width: 1500px; */
+    /* margin-left: 100px; */
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+.tranfer{
+    margin-left: 105px;
+}
+.food{
+    margin-left: 215px;
+}
+.family{
+    margin-left: 90px;
+}
+.safety{
+    margin-left:100px;
+}
+
+.list3{
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    list-style: none;
+    padding: 0;
+    /* margin-left: 100px; */
+}
+.amenities1 h2{
+    font-size:larger;
+    color: rgba(0, 140, 255, 0.977);
+    margin-left: 120px;
+}
